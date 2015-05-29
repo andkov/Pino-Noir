@@ -1,0 +1,18 @@
+{
+    "contents" : "options(width=160)\nrm(list=ls())\ncat(\"\\f\")\n\n\n",
+    "created" : 1432932457695.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2113342010",
+    "id" : "95F553F6",
+    "lastKnownWriteTime" : 1432932897,
+    "path" : "~/GitHub/Pino-Noir/0_enter_data.R",
+    "project_path" : "0_enter_data.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
