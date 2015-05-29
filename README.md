@@ -1,2 +1,2 @@
-Tasting Pino Noir
+Exploring the taste profile of Pinot Noir
 
