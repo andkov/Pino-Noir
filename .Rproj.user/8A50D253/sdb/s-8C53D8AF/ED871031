@@ -1,12 +1,12 @@
 {
-    "contents" : "[Exploring the taste profile of Pinot Noir](http://htmlpreview.github.io/?https://github.com/andkov/Pinot-Noir/blob/master/pinot-noir.html)\n\n![taste card](\"./materials/TasteCard.png\")\n\n\n",
+    "contents" : "##Exploring the taste profile of Pinot Noir\n\n[View the results](http://htmlpreview.github.io/?https://github.com/andkov/Pinot-Noir/blob/master/pinot-noir.html) (updating)\n\n![taste card](materials/TasteCard.png)\n\n\n",
     "created" : 1432933432362.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3707074005",
+    "hash" : "4019463834",
     "id" : "ED871031",
-    "lastKnownWriteTime" : 1433029647,
+    "lastKnownWriteTime" : 1433029895,
     "path" : "~/GitHub/Pinot-Noir/README.md",
     "project_path" : "README.md",
     "properties" : {
