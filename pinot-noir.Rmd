@@ -1,0 +1,60 @@
+---
+title: "Aromas and Flavors in Pinot Noir"
+output:
+  html_document:
+    highlight: haddock
+    theme: spacelab
+    toc: yes
+---
+
+<!--  Set the working directory to the repository's base directory; this assumes the report is nested inside of only one directory.-->
+```{r, echo=F, message=F} 
+library(knitr)
+opts_knit$set(root.dir='.')  #Don't combine this call with any other chunk -especially one that uses file paths.
+```
+
+<!-- Set the report-wide options, and point to the external script file. -->
+```{r, echo=F, message=T}
+require(knitr)
+opts_chunk$set(
+  results='show', 
+  message = TRUE,
+  comment = NA, 
+  tidy = FALSE,
+#   fig.height = 4.8, 
+#   fig.width = 6.5, 
+  out.width = NULL,
+  fig.path = 'figure_rmd/',     
+  dev = "png",
+  dpi = 90
+)
+echoChunks <- FALSE
+warningChunks<- FALSE
+messageChunks<- FALSE
+outwidthChunks <- "130%"
+options(width=120) #So the output is 50% wider than the default.
+read_chunk("./1_graph_data.R") # the file to which knitr calls for the chunks
+```
+
+
+```{r load_packages,message=F, echo=F,warning=F,results='hide'}
+```
+
+```{r load_data, message=F, echo=F,warning=F,results='hide'}
+```
+
+```{r tweak_data, message=F, echo=F,warning=F,results='hide'}
+``` 
+
+```{r define_themes,message=F,  echo=F,warning=F,results='hide'}
+```
+
+
+```{r summary_heat, message=F,  warning=F, echo=F, fig.height=8, fig.width=15}
+```
+
+```{r counts, message=F,  warning=F, echo=F, fig.height=8, fig.width=15}
+```
+
+```{r likability, message=F,  warning=F, echo=F, fig.height=8, fig.width=15}
+```
