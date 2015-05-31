@@ -13,24 +13,24 @@ complex <- c("Earth", "Coffee", "Leather", "Tobacco","Chocolate","Mushroom")
 labels <- c(fruit, oak, complex)
 
 ## @knitr define_wines
-wine1 <- list("Name"= "Innocent Bystander",
+wine1 <- list("Name"= "Quails' Gate",
+              "Region"="Okanagan",
+              "Year"="2013"); 
+wine2 <- list("Name"= "Cono Sur",
+              "Region"="Chile",
+              "Year"="2012"); 
+wine3 <- list("Name"= "Sokol Blosser",
+              "Region"="Oregon",
+              "Year"="2011"); 
+wine4 <- list("Name"= "Curly Flat",
               "Region"="Australia",
-              "Year"="2006"); 
-wine2 <- list("Name"= "Lucia Highlands",
-              "Region"="California",
-              "Year"="2009"); 
-wine3 <- list("Name"= "Kris",
+              "Year"="2012"); 
+wine5 <- list("Name"= "Whitehaven",
               "Region"="New Zealand",
-              "Year"="2007"); 
-wine4 <- list("Name"= "Innocent Bystander II",
-              "Region"="Australia II",
-              "Year"="2002"); 
-wine5 <- list("Name"= "Lucia Highlands II",
-              "Region"="California II",
-              "Year"="2001"); 
-wine6 <- list("Name"= "Kris II",
-              "Region"="New Zealand II",
-              "Year"="2003"); 
+              "Year"="2012"); 
+# wine6 <- list("Name"= "Kris II",
+#               "Region"="New Zealand II",
+#               "Year"="2003"); 
 
 wines <- list(wine1, wine2, wine3)
 names(wines) <- paste0("wine",1:length(wines))
@@ -74,90 +74,477 @@ dtos <- list()
 # dtos[[wine]][[person]] <- compile.data(wine,person)
 
 ################################# 
+wine <- wine2
+person <- "Cassandra"
+aroma_fruit     <- c(0,1,0,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,1)
+flavour_oak     <- c(1,1,0,1,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 6
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine4
+person <- "Cassandra"
+aroma_fruit     <- c(0,1,0,0,0,1)
+aroma_oak       <- c(0,1,0,0,1,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,1,0,0,0,1)
+flavour_oak     <- c(1,1,0,1,0,0)
+flavour_complex <- c(1,0,0,0,1,0)
+likability <- 6
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine5
+person <- "DC"
+aroma_fruit     <- c(1,0,1,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(1,0,1,0,0,0)
+flavour_fruit   <- c(1,0,1,0,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(1,0,1,0,1,0)
+likability <- 7
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine5
+person <- "Sasha"
+aroma_fruit     <- c(0,0,1,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,1,0,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 6
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine5
+person <- "Cassandra"
+aroma_fruit     <- c(0,0,0,1,0,0)
+aroma_oak       <- c(0,0,0,1,0,0)
+aroma_complex   <- c(1,0,0,0,0,0)
+flavour_fruit   <- c(0,1,0,0,0,0)
+flavour_oak     <- c(0,0,0,1,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 5
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine1
+person <- "Amanda"
+aroma_fruit     <- c(0,1,0,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,1,0,0,0,0)
+flavour_oak     <- c(0,0,0,1,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 6
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine1
+person <- "Melanie"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(0,0,1,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,0)
+flavour_oak     <- c(0,0,0,1,0,0)
+flavour_complex <- c(0,0,0,1,0,0)
+likability <- 3
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine2
+person <- "Amanda"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(0,0,3,0,0,0)
+aroma_complex   <- c(0,0,0,1,0,1)
+flavour_fruit   <- c(0,0,0,0,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 4
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine5
+person <- "Melanie"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(1,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(1,0,0,0,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(1,0,0,0,0,0)
+likability <- 5
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
 wine <- wine1
 person <- "Ken"
-aroma_fruit     <- c(0,1,0,1,1,0)
-aroma_oak       <- c(1,0,1,1,1,0)
-aroma_complex   <- c(1,0,0,0,0,1)
-flavour_fruit   <- c(1,1,0,0,0,0)
-flavour_oak     <- c(0,0,0,1,0,0)
-flavour_complex <- c(1,1,1,1,0,0)
+aroma_fruit     <- c(0,1,0,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(1,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(1,0,0,0,0,0)
 likability <- 5
 dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
 
 
 ################################# 
 wine <- wine2
-person <- "Bob"
-aroma_fruit     <- c(0,1,1,1,0,1)
-aroma_oak       <- c(0,0,0,1,1,1)
-aroma_complex   <- c(1,0,1,0,1,0)
-flavour_fruit   <- c(1,1,1,1,1,1)
-flavour_oak     <- c(0,0,0,0,1,1)
-flavour_complex <- c(0,1,0,1,1,1)
+person <- "Ken"
+aroma_fruit     <- c(1,0,0,0,0,0)
+aroma_oak       <- c(0,0,1,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(0,0,1,0,0,0)
+likability <- 4
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine3
+person <- "Ken"
+aroma_fruit     <- c(0,0,1,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,1,0,0)
+flavour_oak     <- c(0,1,0,0,0,0)
+flavour_complex <- c(1,0,0,0,0,0)
+likability <- 3
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine4
+person <- "Ken"
+aroma_fruit     <- c(0,0,0,0,0,1)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,0)
+flavour_oak     <- c(0,0,0,0,1,0)
+flavour_complex <- c(0,0,0,0,1,0)
+likability <- 6
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine5
+person <- "Ken"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(1,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,1,0,0,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(1,0,0,0,0,0)
+likability <- 4
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine1
+person <- "DC"
+aroma_fruit     <- c(1,0,0,0,0,0)
+aroma_oak       <- c(1,0,1,0,0,0)
+aroma_complex   <- c(0,1,0,0,0,1)
+flavour_fruit   <- c(1,0,0,1,0,0)
+flavour_oak     <- c(1,0,0,0,0,0)
+flavour_complex <- c(1,0,1,1,0,0)
+likability <- 4 #NA
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine2
+person <- "DC"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,1,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 1
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine4
+person <- "DC"
+aroma_fruit     <- c(0,0,0,0,0,1)
+aroma_oak       <- c(0,0,1,0,0,0)
+aroma_complex   <- c(1,0,0,0,0,1)
+flavour_fruit   <- c(0,0,0,0,0,1)
+flavour_oak     <- c(0,0,0,1,0,0)
+flavour_complex <- c(1,0,1,0,0,1)
 likability <- 3
 dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
 
 ################################# 
 wine <- wine3
-person <- "Jake"
-aroma_fruit     <- c(0,1,1,0,0,0)
-aroma_oak       <- c(1,0,0,1,0,1)
-aroma_complex   <- c(0,1,0,1,0,0)
-flavour_fruit   <- c(0,0,0,0,1,0)
-flavour_oak     <- c(0,0,0,1,0,1)
-flavour_complex <- c(0,0,0,1,0,1)
-likability <- 7
+person <- "DC"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(0,1,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(1,1,0,0,1,0)
+flavour_oak     <- c(1,0,0,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 4
 dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
-
-# ################################# 
-wine <- wine1
-person <- "Mike"
-aroma_fruit     <- c(1,1,1,0,1,0)
-aroma_oak       <- c(0,1,0,1,1,1)
-aroma_complex   <- c(0,1,0,0,0,0)
-flavour_fruit   <- c(1,0,1,0,0,0)
-flavour_oak     <- c(0,0,0,0,1,1)
-flavour_complex <- c(1,1,1,0,1,0)
-likability <- 1
-dtos[[paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
 
 ################################# 
 wine <- wine4
-person <- "Jake"
-aroma_fruit     <- c(1,1,1,0,1,0)
-aroma_oak       <- c(0,1,0,1,0,1)
-aroma_complex   <- c(0,1,0,1,0,0)
-flavour_fruit   <- c(1,0,1,1,1,0)
-flavour_oak     <- c(0,0,1,0,0,1)
-flavour_complex <- c(1,1,1,0,1,0)
+person <- "Melanie"
+aroma_fruit     <- c(0,0,0,1,0,0)
+aroma_oak       <- c(0,0,0,1,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,0)
+flavour_oak     <- c(0,0,0,1,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
 likability <- 4
-dtos[[paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
 
 ################################# 
 wine <- wine5
-person <- "John"
-aroma_fruit     <- c(1,1,1,0,0,1)
-aroma_oak       <- c(0,1,0,1,0,1)
-aroma_complex   <- c(0,1,0,0,0,0)
-flavour_fruit   <- c(1,0,1,0,1,0)
-flavour_oak     <- c(0,0,0,0,1,0)
-flavour_complex <- c(1,0,0,0,1,0)
-likability <- 2
-dtos[[paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+person <- "Amanda"
+aroma_fruit     <- c(0,0,0,1,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,1,0)
+flavour_oak     <- c(0,1,0,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 4 #NA
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
 
 ################################# 
-wine <- wine6
-person <- "Trevor"
-aroma_fruit     <- c(1,1,1,0,1,0)
-aroma_oak       <- c(0,1,0,1,1,1)
-aroma_complex   <- c(0,1,0,1,0,0)
-flavour_fruit   <- c(1,0,1,0,0,0)
-flavour_oak     <- c(0,1,0,0,1,1)
-flavour_complex <- c(1,0,1,0,0,0)
-likability <- 6
-dtos[[paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+wine <- wine4
+person <- "Ola"
+aroma_fruit     <- c(0,0,1,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,0)
+flavour_oak     <- c(0,0,0,1,0,0)
+flavour_complex <- c(0,0,0,1,0,0)
+likability <- 3
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
 
+################################# 
+wine <- wine3
+person <- "Ola"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(1,0,0,0,0,0)
+aroma_complex   <- c(1,0,0,0,0,0)
+flavour_fruit   <- c(0,1,0,0,0,0)
+flavour_oak     <- c(1,0,1,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 5
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine1
+person <- "Ola"
+aroma_fruit     <- c(0,0,1,0,0,0)
+aroma_oak       <- c(0,0,0,1,0,0)
+aroma_complex   <- c(0,0,1,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,1)
+flavour_oak     <- c(0,0,1,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 6
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine5
+person <- "Ola"
+aroma_fruit     <- c(0,0,1,0,0,0)
+aroma_oak       <- c(0,0,1,1,0,0)
+aroma_complex   <- c(1,0,0,0,0,0)
+flavour_fruit   <- c(0,1,0,0,0,0)
+flavour_oak     <- c(0,1,0,0,0,0)
+flavour_complex <- c(1,0,0,0,1,0)
+likability <- 7
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine4
+person <- "Sasha"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(1,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(1,0,0,0,0,0)
+flavour_oak     <- c(1,0,0,0,0,0)
+flavour_complex <- c(0,0,0,1,0,0)
+likability <- 5
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine1
+person <- "Sasha"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,1,0,0)
+flavour_oak     <- c(1,0,0,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 4
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine3
+person <- "Sasha"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(1,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,0)
+flavour_oak     <- c(1,0,0,0,0,0)
+flavour_complex <- c(1,0,0,0,0,0)
+likability <- 3
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine2
+person <- "Sasha"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,0,0,0,1)
+flavour_oak     <- c(1,0,0,0,0,0)
+flavour_complex <- c(0,0,0,0,0,1)
+likability <- 5
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine3
+person <- "Andrey"
+aroma_fruit     <- c(1,0,1,0,0,1)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,0,1,0,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(1,1,0,0,0,0)
+likability <- 3
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine5
+person <- "Andrey"
+aroma_fruit     <- c(0,0,0,0,1,0)
+aroma_oak       <- c(0,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(1,0,1,0,0,0)
+flavour_oak     <- c(0,0,0,0,0,0)
+flavour_complex <- c(0,1,0,0,1,0)
+likability <- 5
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine1
+person <- "Peter"
+aroma_fruit     <- c(1,0,0,0,0,0)
+aroma_oak       <- c(0,0,1,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,1,1,0,0,0)
+flavour_oak     <- c(0,0,1,1,0,0)
+flavour_complex <- c(1,0,0,0,0,0)
+likability <- 6
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine2
+person <- "Peter"
+aroma_fruit     <- c(0,0,1,0,0,0)
+aroma_oak       <- c(0,0,1,1,0,0)
+aroma_complex   <- c(1,0,0,0,0,1)
+flavour_fruit   <- c(0,1,1,0,0,1)
+flavour_oak     <- c(0,0,0,1,0,0)
+flavour_complex <- c(1,0,0,0,0,0)
+likability <- 5
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine4
+person <- "Peter"
+aroma_fruit     <- c(0,1,1,0,0,0)
+aroma_oak       <- c(0,1,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,1,1,0,0,0)
+flavour_oak     <- c(0,1,0,1,0,0)
+flavour_complex <- c(0,0,0,0,1,0)
+likability <- 6
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine3
+person <- "Peter"
+aroma_fruit     <- c(0,1,0,0,0,0)
+aroma_oak       <- c(1,0,1,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,1,1,0,0,0)
+flavour_oak     <- c(1,0,1,1,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 5
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine1
+person <- "Bob"
+aroma_fruit     <- c(0,1,0,0,0,0)
+aroma_oak       <- c(1,0,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,1,0,0,0,0)
+flavour_oak     <- c(1,0,0,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 4
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine3
+person <- "Raquel"
+aroma_fruit     <- c(1,0,1,0,0,0)
+aroma_oak       <- c(1,0,1,0,0,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(1,1,1,0,0,0)
+flavour_oak     <- c(1,0,1,1,0,0)
+flavour_complex <- c(0,0,0,1,0,0)
+likability <- 4
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine4
+person <- "Raquel"
+aroma_fruit     <- c(0,0,0,0,0,0)
+aroma_oak       <- c(0,1,0,0,0,0)
+aroma_complex   <- c(0,0,0,0,1,0)
+flavour_fruit   <- c(0,1,1,0,1,0)
+flavour_oak     <- c(1,0,1,0,0,0)
+flavour_complex <- c(0,0,0,0,0,0)
+likability <- 5
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+################################# 
+wine <- wine5
+person <- "Raquel"
+aroma_fruit     <- c(0,1,0,0,0,1)
+aroma_oak       <- c(0,1,0,0,1,0)
+aroma_complex   <- c(0,0,0,0,0,0)
+flavour_fruit   <- c(0,1,0,0,0,1)
+flavour_oak     <- c(1,1,0,0,1,0)
+flavour_complex <- c(1,0,0,0,1,0)
+likability <- 6
+dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+
+
+
+# ################################# 
+# wine <- wine
+# person <- "Name"
+# aroma_fruit     <- c(0,0,0,0,0,0)
+# aroma_oak       <- c(0,0,0,0,0,0)
+# aroma_complex   <- c(0,0,0,0,0,0)
+# flavour_fruit   <- c(0,0,0,0,0,0)
+# flavour_oak     <- c(0,0,0,0,0,0)
+# flavour_complex <- c(0,0,0,0,0,0)
+# likability <- 0
+# dtos[[ paste0(wine[["Name"]],"_",person)]]<- compile.data(wine,person)
+# 
+# 
 
 
 

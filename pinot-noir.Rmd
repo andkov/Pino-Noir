@@ -58,3 +58,6 @@ read_chunk("./1_graph_data.R") # the file to which knitr calls for the chunks
 
 ```{r likability, message=F,  warning=F, echo=F, fig.height=8, fig.width=15}
 ```
+
+```{r both_heat, message=F,  warning=F, echo=F, fig.height=8, fig.width=15}
+```
